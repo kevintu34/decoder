@@ -18,11 +18,13 @@ const caesarModule = (function () {
       //figure out the index number of each character
         //indexOf returns a negative number if it doesn't exist in the string
       const originalIndex = lookup.indexOf(letter)
+      //returns a nonspecial character to results
       if(originalIndex === -1) {
         result += letter
       } 
       else {
         let shiftedIndex
+        //accounts for going past z or before a
         if(encode) {
           shiftedIndex = originalIndex + shift
           if(shiftedIndex > 25) {

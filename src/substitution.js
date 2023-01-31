@@ -7,6 +7,7 @@ const substitutionModule = (function () {
   // you can add any code you want within this function scope
 
   function substitution(input, alphabet, encode = true) {
+    //creates a new set with only the unique alphabets, checking to see if the set's size is 26
     const uniqueAlphabet = new Set(alphabet)
     if (!alphabet || alphabet.length !== 26 || uniqueAlphabet.size !== 26) {
         return false
